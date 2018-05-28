@@ -17,8 +17,8 @@ while(1):
     kernel = np.ones((5,5),np.uint8)
     erosion = cv2.erode(mask,kernel,iterations = 1)
     dilation = cv2.dilate(mask,kernel,iterations = 1)
-
-	opening = cv2.morphologyEx(mask, cv2.MORPH_OPEN, kernel)#removes false positives(bg noise--white dots)
+    
+    opening = cv2.morphologyEx(mask, cv2.MORPH_OPEN, kernel)#removes false positives(bg noise--white dots)
 	
     closing = cv2.morphologyEx(mask, cv2.MORPH_CLOSE, kernel)#removes false negatives(noise in the object--white dots))
     
